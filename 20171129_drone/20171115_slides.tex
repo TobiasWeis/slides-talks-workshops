@@ -102,6 +102,81 @@
 	\color{gray}{http://fpvracing.ch/img/cms/infobereich/Bauanleitung/06-FPV-Overview\_1.jpg}
 \end{frame}
 
+\begin{frame}{Drone tech}
+	Example: Walkera QR-X350 Pro
+	\begin{itemize}
+		\item Battery: 5Ah 30C Li-Po $\rightarrow$ 10-20 min. of flight w/ Cam + GPS
+		\item Weight (incl. gimbal, camera, battery, transmitter): 1250g
+		\item Topspeed: 71 km/h
+		\item Cost: ca. 400 EUR
+	\end{itemize}
+	
+	Remote-control
+	\begin{itemize}
+		\item Devo-7: 2.4Ghz, output: up to 20db (100mW) - up to 3km range
+	\end{itemize}
+	
+	FPV - Camera stream transmission
+	\begin{itemize}
+		\item 5.8 Ghz transmitter, 600mw - up to 2km range, most often below 600m
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Drone tech - Hardware}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{images/qrx350pro_disassembled.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Drone tech - GPS and positioning}
+	\begin{columns}
+	
+	\begin{column}{.25\textwidth}
+	\begin{figure}
+		\includegraphics[width=1\linewidth]{images/qrx350pro_3drcontrol.png}\\
+		\color{gray}{Tower android app}
+	\end{figure}
+	\end{column}
+	
+	\begin{column}{.74\textwidth}
+		\begin{itemize}
+			\item Mavlink-protocol to communicate with FlightController
+			\item Get telemetry-data (current position, angles, height)
+			\item Set targets, send control instructions
+		\end{itemize}
+	\end{column}
+	
+	\end{columns}
+\end{frame}
+	
+\begin{frame}{Drone tech - Computer vision}
+	\begin{columns}
+	
+		\begin{column}{.49\textwidth}
+			Off-Drone-Processing
+			\begin{itemize}
+				\item Re-use compute-hardware
+				\item Latency
+				\item Limited range
+			\end{itemize}
+		\end{column}
+
+		\begin{column}{.49\textwidth}
+			On-Drone-Processing
+			\begin{itemize}
+				\item No latency
+				\item Requires additional hardware,
+					\begin{itemize}
+						\item more weight
+						\item more power-usage
+						\item hardware evt. destroyed
+					\end{itemize}
+			\end{itemize}
+			Suitable hardware not existent \emph{yet}			
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \section{Drone- and weapon-related science and projects}
 \begin{frame}{Drone- and weapon-related science and projects}
 	\begin{itemize}
