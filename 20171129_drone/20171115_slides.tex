@@ -102,6 +102,12 @@
 	\color{gray}{http://fpvracing.ch/img/cms/infobereich/Bauanleitung/06-FPV-Overview\_1.jpg}
 \end{frame}
 
+\begin{frame}{Drone tech - Hardware}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{images/qrx350pro_disassembled.jpg}
+	\end{figure}
+\end{frame}
+
 \begin{frame}{Drone tech}
 	Example: Walkera QR-X350 Pro
 	\begin{itemize}
@@ -120,13 +126,46 @@
 	\begin{itemize}
 		\item 5.8 Ghz transmitter, 600mw - up to 2km range, most often below 600m
 	\end{itemize}
+	
+	Telemetry - Serial data connection
+	\begin{itemize}
+		\item 433 Mhz - more than 1km range
+	\end{itemize}
 \end{frame}
 
-\begin{frame}{Drone tech - Hardware}
-	\begin{figure}
-		\includegraphics[width=0.9\linewidth]{images/qrx350pro_disassembled.jpg}
-	\end{figure}
+\begin{frame}{Drone tech - Sensors}
+	To maintain stability and navigate, the Flight Controller is usually connected to a lot of onboard sensors:
+	\begin{columns}
+	\begin{column}{.8\textwidth}
+	\begin{itemize}
+		\item Acceleration/Turnrate: Accelerometer + Gyroscope
+		
+		\item Height: Barometer
+		
+		\item Global orientation: Magnetometer (Compass)
+		
+		\item Global positioning: GPS
+		
+		\item Relative speed: Optical flow
+
+	\end{itemize}
+	\end{column}
+	
+	\begin{column}{.19\textwidth}
+		\includegraphics[width=0.8\linewidth]{images/acc_gyro.jpg}\\
+		\vspace{0.2cm}
+		\includegraphics[width=0.8\linewidth]{images/barometer.jpg}\\	
+		\vspace{0.2cm}	
+		\includegraphics[width=0.8\linewidth]{images/magnetometer.jpg}\\
+		\vspace{0.2cm}			
+		\includegraphics[width=0.8\linewidth]{images/cyrocomm_gps.jpg}\\
+		\vspace{0.2cm}			
+		\includegraphics[width=0.8\linewidth]{images/optical_flow.png}	
+	\end{column}
+	\end{columns}
+	\tiny{\color{gray}{Images from: http://www.dronetrest.com/t/beginners-guide-to-drone-autopilots-flight-controllers-and-how-they-work/1380}}
 \end{frame}
+
 
 \begin{frame}{Drone tech - GPS and positioning}
 	\begin{columns}
