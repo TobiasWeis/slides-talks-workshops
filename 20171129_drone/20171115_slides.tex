@@ -10,10 +10,11 @@
 \setbeamercolor{progress bar}{fg=RoyalBlue!100, bg=RoyalBlue!30}
 \setbeamercolor{frametitle}{bg=BgBlue!100}
 \title{AIOLI - AI Open Lab Initiative}
+\subtitle{SciFi debunked - Slaughterbots}
 \date{\today}
 %\author{Tobias Weis - weis@ccc.cs.uni-frankfurt.de}
-\author{\texorpdfstring{\url{[mundt,weis]@ccc.cs.uni-frankfurt.de}}{Tobias Weis}}
-\institute{Systems Engineering for Computer Vision}
+\author{\texorpdfstring{\url{mail@tobias-weis.de}}{Tobias Weis}}
+%\institute{Systems Engineering for Computer Vision}
 
 %%%%%%%%%%%%%%%%%%% TITLE RIGHT
 \makeatletter
@@ -65,7 +66,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                       DEFINITIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{SciFi debunked - Slaugherbots}
+%\section{SciFi debunked - Slaugherbots}
 	\begin{frame}{Agenda}
 		\tableofcontents
 
@@ -231,15 +232,51 @@
             {\includegraphics[width=\linewidth]{images/AutoDroneNvidia.png}}
 \end{frame}
 
+\begin{frame}{NVIDIA - Autonomous Drone video (3:10)}
+	\begin{itemize}
+		\item NVIDIA Jetson TX1 onboard processing, trained on videos of eight miles of trails
+		%\item Sensors: PX4FLOW  optical  flow  sensor  with  sonar,and Lidar Lite V3.		
+		\item Resnet-18 architecture computes view orientation and lateral offset output
+		\item YOLO DNN for object detection, Visual odometry
+		%\item Controller runs at 20Hz
+		%\item Training data: videos shot along eight miles of trails in the Pacific Northwest, different lighting conditions with three wide-angle GoPro cameras mounted on the left, center and right of a metal bar on a mini Segway
+	\end{itemize}
+	\centering
+	\includegraphics[width=.4\textwidth]{images/nvidia_controller.png}
+	
+	\tiny{\color{gray}{https://arxiv.org/pdf/1705.02550.pdf}}
+	
+\end{frame}
+
 \begin{frame}{NASA JPL autonomous drone race}
         	\centering
             \href{run:./videos/NasaAutoDrone.mp4?autostart}
             {\includegraphics[width=\linewidth]{images/nasa.png}}
 \end{frame}
+
 \begin{frame}{NASA JPL autonomous drone race}
+	\begin{quote}
+		[...] processing is all done onboard. The team holds the drone and “walks” it through the course slowly ahead of the race to “teach” it the layout.[...] \hfill (Andrew Good, JPL, 06.12.17)
+	\end{quote}
+
+	\begin{columns}
+	\begin{column}{.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/jpl_drone.jpeg}	
+	\end{column}
+	
+	\begin{column}{.7\textwidth}
 	\begin{itemize}
-		\item Localize by comparing current camera-picture against pre-built map
+		\item Localize by comparing current sensor-input to pre-built map
+		\item Google Tango technology for VR - 3D mapping
+		\item Qualcomm Snapdragon Flight board is used for real-time flight control
+		\item 2 wide-field-of-view-cameras: forward + downward
+		\item Depth-map from motion stereo
 	\end{itemize}
+	\end{column}
+	\end{columns}
+	
+	\vspace{5mm}
 	\color{gray}{https://www.nasa.gov/feature/jpl/drone-race-human-versus-artificial-intelligence}
 \end{frame}
 
