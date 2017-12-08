@@ -227,61 +227,6 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{NVIDIA - Autonomous Drone video (3:10)}
-        	\centering
-            \href{run:./videos/AutoDroneNvidia.mp4?autostart}
-            {\includegraphics[width=\linewidth]{images/AutoDroneNvidia.png}}
-\end{frame}
-
-\begin{frame}{NVIDIA - Autonomous Drone video (3:10)}
-	\begin{itemize}
-		\item NVIDIA Jetson TX1 onboard processing, trained on videos of eight miles of trails
-		%\item Sensors: PX4FLOW  optical  flow  sensor  with  sonar,and Lidar Lite V3.		
-		\item Resnet-18 architecture computes view orientation and lateral offset output
-		\item YOLO DNN for object detection, Visual odometry
-		%\item Controller runs at 20Hz
-		%\item Training data: videos shot along eight miles of trails in the Pacific Northwest, different lighting conditions with three wide-angle GoPro cameras mounted on the left, center and right of a metal bar on a mini Segway
-	\end{itemize}
-	\centering
-	\includegraphics[width=.4\textwidth]{images/nvidia_controller.png}
-	
-	\tiny{\color{gray}{https://arxiv.org/pdf/1705.02550.pdf}}
-	
-\end{frame}
-
-\begin{frame}{NASA JPL autonomous drone race}
-        	\centering
-            \href{run:./videos/NasaAutoDrone.mp4?autostart}
-            {\includegraphics[width=\linewidth]{images/nasa.png}}
-\end{frame}
-
-\begin{frame}{NASA JPL autonomous drone race}
-	\begin{quote}
-		[...] processing is all done onboard. The team holds the drone and “walks” it through the course slowly ahead of the race to “teach” it the layout.[...] \hfill (Andrew Good, JPL, 06.12.17)
-	\end{quote}
-
-	\begin{columns}
-	\begin{column}{.3\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{images/jpl_drone.jpeg}	
-	\end{column}
-	
-	\begin{column}{.7\textwidth}
-	\begin{itemize}
-		\item Localize by comparing current sensor-input to pre-built map
-		\item Google Tango technology for VR - 3D mapping
-		\item Qualcomm Snapdragon Flight board is used for real-time flight control
-		\item 2 wide-field-of-view-cameras: forward + downward
-		\item Depth-map from motion stereo
-	\end{itemize}
-	\end{column}
-	\end{columns}
-	
-	\vspace{5mm}
-	\color{gray}{https://www.nasa.gov/feature/jpl/drone-race-human-versus-artificial-intelligence}
-\end{frame}
-
-
 \begin{frame}{Intel drone swarm}
         	\centering
             \href{run:./videos/Intel.mp4?autostart}
@@ -367,9 +312,113 @@ IAI - Israel Aerospace Industries\\
 	\end{itemize}
 
 \centering
-\includegraphics[width=.6\textwidth]{images/drone_jammer.jpg}
+\includegraphics[width=.5\textwidth]{images/drone_jammer.jpg}
+	\begin{itemize}
+		\item Logical next step? Autonomy without GPS and remote operator.
+	\end{itemize}
 
 \tiny{\color{gray}{http://www.dailymail.co.uk/sciencetech/article-3978762/The-death-ray-knock-drones-mile-away-Rifle-uses-radio-waves-kill-UAVs.html}}
+\end{frame}
+
+\section{Autonomous drones}
+\begin{frame}{Autonomy}
+	Entering AI/ML: How can an artificial system perceive, act, localize and navigate in an unknown open world without a human operator?
+	\begin{itemize}
+		\item \textbf{Learn} from examples - Build knowledge - Abstract and apply
+		\item For the weaponization scenario: Without sensors that might be jammed
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{NVIDIA - Autonomous Drone video (3:10)}
+        	\centering
+            \href{run:./videos/AutoDroneNvidia.mp4?autostart}
+            {\includegraphics[width=\linewidth]{images/AutoDroneNvidia.png}}
+\end{frame}
+
+\begin{frame}{NVIDIA - Autonomous Drone video (3:10)}
+	\begin{itemize}
+		\item NVIDIA Jetson TX1 onboard processing, trained on videos of eight miles of trails
+		%\item Sensors: PX4FLOW  optical  flow  sensor  with  sonar,and Lidar Lite V3.		
+		\item Resnet-18 architecture computes view orientation and lateral offset output
+		\item YOLO DNN for object detection, Visual odometry
+		%\item Controller runs at 20Hz
+		%\item Training data: videos shot along eight miles of trails in the Pacific Northwest, different lighting conditions with three wide-angle GoPro cameras mounted on the left, center and right of a metal bar on a mini Segway
+	\end{itemize}
+	\centering
+	\includegraphics[width=.4\textwidth]{images/nvidia_controller.png}
+	
+	\tiny{\color{gray}{https://arxiv.org/pdf/1705.02550.pdf}}
+	
+\end{frame}
+
+\begin{frame}{NASA JPL autonomous drone race}
+        	\centering
+            \href{run:./videos/NasaAutoDrone.mp4?autostart}
+            {\includegraphics[width=\linewidth]{images/nasa.png}}
+\end{frame}
+
+\begin{frame}{NASA JPL autonomous drone race}
+	\begin{quote}
+		[...] processing is all done onboard. The team holds the drone and “walks” it through the course slowly ahead of the race to “teach” it the layout.[...] \hfill (Andrew Good, JPL, 06.12.17)
+	\end{quote}
+
+	\begin{columns}
+	\begin{column}{.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/jpl_drone.jpeg}	
+	\end{column}
+	
+	\begin{column}{.7\textwidth}
+	\begin{itemize}
+		\item Localize by comparing current sensor-input to pre-built map
+		\item Google Tango technology for VR - 3D mapping
+		\item Qualcomm Snapdragon Flight board is used for real-time flight control
+		\item 2 wide-field-of-view-cameras: forward + downward
+		\item Depth-map from motion stereo
+	\end{itemize}
+	\end{column}
+	\end{columns}
+	
+	\vspace{5mm}
+	\color{gray}{https://www.nasa.gov/feature/jpl/drone-race-human-versus-artificial-intelligence}
+\end{frame}
+
+\begin{frame}{UPENN - Vijay Kumar Lab - RAPID}
+	\centering
+            \href{run:./videos/kumar_lab.mp4?autostart}
+            {\includegraphics[width=.95\linewidth]{images/kumar_lab.png}}
+\end{frame}
+
+\begin{frame}{UPENN - Vijay Kumar Lab - RAPID}
+	\begin{columns}
+	
+	\begin{column}{.49\textwidth}
+	\begin{itemize}
+		\item 1.9 kg MAV platform 
+		\item IMU, laser scanner, stereo cameras, pressure altimeter, magnetometer, GPS 
+		\item computation is performed onboard on an Intel NUC computer with 3rd generation i3 processor.
+	\end{itemize}
+	
+	\end{column}
+	\begin{column}{.49\textwidth}
+	\includegraphics[width=\textwidth]{images/kumar_lab.jpg}
+	\end{column}
+	\end{columns}	
+	\vspace{15mm}
+	\color{gray}{https://www.kumarrobotics.org/videos/rapid/}
+\end{frame}
+
+\section{Finding and Identifying targets}
+\begin{frame}{Machine-Learning - Finding and identifying targets}
+	Slaughterbot szenario:
+	\begin{itemize}
+		\item (Bad) guys release drones from somewhere safe
+		\item Drones have preprogrammed targets,
+		\item ... start to search targets
+		\item ... navigate through complex environments		
+		\item ... identify targets
+		\item ... take out target
+	\end{itemize}
 \end{frame}
 
 \section{Live-demo}
