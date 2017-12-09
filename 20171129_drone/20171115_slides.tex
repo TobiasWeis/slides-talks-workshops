@@ -188,40 +188,26 @@
 	
 	\end{columns}
 \end{frame}
-	
-\begin{frame}{Drone tech - Computer vision}
-	\begin{columns}
-	
-		\begin{column}{.49\textwidth}
-			Off-Drone-Processing
-			\begin{itemize}
-				\item Re-use compute-hardware
-				\item Latency
-				\item Limited range
-			\end{itemize}
-		\end{column}
 
-		\begin{column}{.49\textwidth}
-			On-Drone-Processing
-			\begin{itemize}
-				\item No latency
-				\item Requires additional hardware,
-					\begin{itemize}
-						\item more weight
-						\item more power-usage
-						\item hardware evt. destroyed
-					\end{itemize}
-			\end{itemize}
-			Suitable hardware not existent \emph{yet}			
-		\end{column}
-	\end{columns}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Navigation, Localization and Control}
+
+\begin{frame}{this}
+	\begin{itemize}
+		\item How are drones controlled atm?
+		\item How can they navigate without crashing?
+		\item What are the drawbacks?
+		\item What are the current approaches to more autonomy?
+	\end{itemize}
 \end{frame}
 
-\section{Drone- and weapon-related science and projects}
 \begin{frame}{Drone- and weapon-related science and projects}
 	\begin{itemize}
 		\item DoD: Perdix micro-drone-swarm
-		\item Israel Aerospace Industries: 
+		%\item Israel Aerospace Industries: 
 		%\item No Info about localization found: ETH Zurich (D'Andrea): http://flyingmachinearena.org/research/, https://www.youtube.com/watch?v=RCXGpEmFbOw
         \item The pentagon wants you to develop drone swarms: https://thenextweb.com/insider/2017/10/23/the-pentagon-wants-you-to-develop-drone-swarms-for-the-military/
 	\end{itemize}
@@ -409,24 +395,61 @@ IAI - Israel Aerospace Industries\\
 \end{frame}
 
 \section{Finding and Identifying targets}
-\begin{frame}{Machine-Learning - Finding and identifying targets}
-	Slaughterbot szenario:
+\begin{frame}{And now?}
 	\begin{itemize}
-		\item (Bad) guys release drones from somewhere safe
-		\item Drones have preprogrammed targets,
-		\item ... start to search targets
-		\item ... navigate through complex environments		
-		\item ... identify targets
-		\item ... take out target
+		\item Drones are now able to fly without operator and without crashing
+		\item How should they find their targets in the Slaughterbot scenario?
+		\item State-of-the-art in ML allows to find human bodies in camera images (when sufficiently bright)
+		\item The drone can attempt facial identification once a body is found		
 	\end{itemize}
 \end{frame}
 
-\section{Live-demo}
-\begin{frame}{Livedemo}
+\begin{frame}{Demo}
+\centering
+            \href{run:./videos/aioli_detections.mp4?autostart}
+            {\includegraphics[width=.95\linewidth]{images/aioli_detections.png}}
+\end{frame}
+
+\begin{frame}{Detection}
+	\begin{itemize}
+		\item Identification requires some (most times: a lot) images of the target
+	\end{itemize}
+	\includegraphics[width=.35\textwidth]{images/mosaic_tobi.png}
+	\hspace{1cm}
+    \href{run:./videos/face_recog.mp4?autostart&loop}
+    {\includegraphics[width=.49\linewidth]{images/face_recog.png}}	
 \end{frame}
 
 \section{Assessment}
 \begin{frame}{Assessment}
+\end{frame}
+
+\begin{frame}{Drone tech - Computer vision}
+	\begin{columns}
+	
+		\begin{column}{.49\textwidth}
+			Off-Drone-Processing
+			\begin{itemize}
+				\item Re-use compute-hardware
+				\item Latency
+				\item Limited range
+			\end{itemize}
+		\end{column}
+
+		\begin{column}{.49\textwidth}
+			On-Drone-Processing
+			\begin{itemize}
+				\item No latency
+				\item Requires additional hardware,
+					\begin{itemize}
+						\item more weight
+						\item more power-usage
+						\item hardware evt. destroyed
+					\end{itemize}
+			\end{itemize}
+			Suitable hardware not existent \emph{yet}			
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \end{document}
