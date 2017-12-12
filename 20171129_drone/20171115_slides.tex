@@ -1,5 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{tikz}
+\usepackage{array}
 \usepackage{multimedia}
 % numbering=none,counter,fraction - frame number at bottom right
 \usetheme[block=fill,numbering=none,progressbar=foot]{metropolis}           % Use metropolis theme
@@ -195,9 +196,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Navigation, Localization and Control}
 
-\begin{frame}{this}
+\begin{frame}{Navigation, localization and control}
 	\begin{itemize}
-		\item How are drones controlled atm?
+		\item How are drones controlled at the moment?
 		\item How can they navigate without crashing?
 		\item What are the drawbacks?
 		\item What are the current approaches to more autonomy?
@@ -455,12 +456,55 @@ IAI - Israel Aerospace Industries\\
     {\includegraphics[width=.49\linewidth]{images/face_recog.png}}	
 \end{frame}
 
-\begin{frame}{Hardware and stuff}
+\begin{frame}{Hardware used for this demo}
+	Processed offline:
 	\begin{itemize}
 		\item Hardware used: NVIDIA GTX 1080 Ti, i7-7700K @ 4.2Ghz
-		\item Framerate achieved: 10fps
+		\item Framerate achieved: 20fps
 		\item Energy spent? (GPU: 250W, @12V -> ca. 20A)
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Embedded GPUs}
+	\begin{columns}
+		\begin{column}{.6\linewidth}
+			NVIDIA Jetson TX2
+			\begin{itemize}
+				\item System-on-module
+				\item 256-core NVIDIA Pascal GPU
+				\item hex-core ARMv8 64-bit CPU
+				\item 8GB of LPDDR4 memory with a 128-bit interface
+				\item weight: 85g, size: 50x87mm
+				\item up to 12W power consumption (@12V $\rightarrow$ 1A)
+				\item Reported fps for pose-detection: 8fps
+			\end{itemize}
+		\end{column}
+		\begin{column}{.4\linewidth}
+			\includegraphics[width=\textwidth]{images/jetson_tx2.png}
+		\end{column}
+	\end{columns}
+	\vspace{5mm}
+			\tiny{\color{gray}{https://devblogs.nvidia.com/parallelforall/jetson-tx2-delivers-twice-intelligence-edge/}}\\
+			\tiny{\color{gray}{https://github.com/CMU-Perceptual-Computing-Lab/openpose/pull/245}}	
+\end{frame}
+
+\begin{frame}{Lifting capabilites of some consumer drones}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{Model} & \textbf{Payload} & \textbf{Size} & \textbf{Airtime} & \textbf{Price} & \textbf{Image}\\
+		\hline
+		Cheerson CX10 & 4-6g & 40x40mm, 15g & 5-8min &  15 EUR & \raisebox{-7mm}{\includegraphics[height=10mm]{images/cheerson_cx10.png}}\\
+		\hline
+		Syma x8c & 200g & 50x50cm, 500g  &  12min & 70 EUR & \raisebox{-7mm}{\includegraphics[height=10mm]{images/symax8c.jpg}} \\
+		\hline
+		3DR X8+ & 1kg & 35x50cm, 2.5 kg & 15min & 1150 EUR & \raisebox{-7mm}{\includegraphics[height=10mm]{images/x8plus.jpeg}} \\
+		\hline 
+		DJI S900 & 3kg & 90cm diam, 3.3kg & 18min & 1200 EUR & \raisebox{-7mm}{\includegraphics[height=10mm]{images/djis900.jpg}}\\
+		\hline
+		Tarot T18 & 8kg & 127cm diam, 8kg & 30min & 2000 EUR & \raisebox{-7mm}{\includegraphics[height=10mm]{images/tarot18.jpg}} \\
+		
+		\hline
+	\end{tabular}
 \end{frame}
 
 \section{Assessment}
@@ -473,32 +517,18 @@ IAI - Israel Aerospace Industries\\
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Drone tech - Computer vision}
-	\begin{columns}
-	
-		\begin{column}{.49\textwidth}
-			Off-Drone-Processing
-			\begin{itemize}
-				\item Re-use compute-hardware
-				\item Latency
-				\item Limited range
-			\end{itemize}
-		\end{column}
+\begin{frame}{Try it yourself}
+	Want to get your hands dirty?
+	\begin{itemize}
+		\item Microsoft airsim Unreal simulator, c++ and python programmable: https://github.com/Microsoft/AirSim	
+		\item Cheap indoor, python-programmable computer vision Wifi drone: Parrot AR 2.0 (used for 50EUR on ebay)
+		\item Self-built drone-plattforms with necessary parts (radio-control, camera, batteries, charger, etc.): starting from 400EUR
+	\end{itemize}
+\end{frame}
 
-		\begin{column}{.49\textwidth}
-			On-Drone-Processing
-			\begin{itemize}
-				\item No latency
-				\item Requires additional hardware,
-					\begin{itemize}
-						\item more weight
-						\item more power-usage
-						\item hardware evt. destroyed
-					\end{itemize}
-			\end{itemize}
-			Suitable hardware not existent \emph{yet}			
-		\end{column}
-	\end{columns}
+\begin{frame}{Discussion - End}
+	\center
+	\huge{Thanks a lot for your attention!}
 \end{frame}
 
 \end{document}
