@@ -508,19 +508,23 @@ IAI - Israel Aerospace Industries\\
 \end{frame}
 
 \section{Assessment}
-\begin{frame}{Assessment}
+\begin{frame}{Assessment and basis for discussions}
+	Today not feasible (at least not in the complete package)
 	\begin{itemize}
-		\item Today not feasible
-		\item Limited flight time - if specific targets, need a GPS-fix or something beforehand
-		\item Drone cannot "loiter" to wait for a target to get out of a building
-		\item Far too expensive for "everyday" use
+		\item Tradeoff between necessary compute-power, take-off-weight, flight-time, size and speed
+		\item $\rightarrow$ Today not feasible in the shown size
+		\item Limited flight time and range - if specific persons should be targeted, need a GPS-fix or initial position beforehand
+		\item Far too expensive to be widely deployed (today: several hundred dollars)
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Try it yourself}
 	Want to get your hands dirty?
 	\begin{itemize}
-		\item Microsoft airsim Unreal simulator, c++ and python programmable: https://github.com/Microsoft/AirSim	
+		\item Microsoft airsim Unreal simulator, c++ and python programmable: https://github.com/Microsoft/AirSim\\
+		\centering
+            \href{run:./videos/AirSimDemo.mp4?autostart}
+            {\includegraphics[width=.45\linewidth]{images/AirSimDemo.png}}	
 		\item Cheap indoor, python-programmable computer vision Wifi drone: Parrot AR 2.0 (used for 50EUR on ebay)
 		\item Self-built drone-plattforms with necessary parts (radio-control, camera, batteries, charger, etc.): starting from 400EUR
 	\end{itemize}
